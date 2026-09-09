@@ -1,0 +1,520 @@
+{
+  "metadata": {
+    "evaluation_date": "2026-09-09T10:43:56Z",
+    "brand": "AmazonHelp",
+    "golden_set_size": 160,
+    "human_scored_sample_size": 40,
+    "cost_weights": {
+      "false_escalation": 1.0,
+      "missed_escalation": 5.0
+    }
+  },
+  "systems": {
+    "trivial_baseline": {
+      "system_name": "Trivial Baseline",
+      "sample_size": 160,
+      "elapsed_time_seconds": 0.01,
+      "intent_classification": {
+        "accuracy": 0.1688,
+        "macro_precision": 0.0211,
+        "macro_recall": 0.125,
+        "macro_f1": 0.0361,
+        "per_class": {
+          "order_status_tracking": {
+            "precision": 0.1688,
+            "recall": 1.0,
+            "f1": 0.2888
+          },
+          "shipping_delay_delivery_issue": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "refund_and_cancellation": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "damaged_or_wrong_item": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "account_access_security": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "billing_and_payment_dispute": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "subscription_and_digital_services": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "general_feedback_other": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            27,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            22,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            22,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            22,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            20,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            17,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            16,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            14,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "taxonomy": [
+          "order_status_tracking",
+          "shipping_delay_delivery_issue",
+          "refund_and_cancellation",
+          "damaged_or_wrong_item",
+          "account_access_security",
+          "billing_and_payment_dispute",
+          "subscription_and_digital_services",
+          "general_feedback_other"
+        ]
+      },
+      "routing_policy": {
+        "accuracy": 0.6562,
+        "escalation_precision": 0.0,
+        "escalation_recall": 0.0,
+        "escalation_f1": 0.0,
+        "false_escalations": 0,
+        "missed_escalations": 55,
+        "total_routing_cost": 275.0,
+        "cost_per_query": 1.7188
+      },
+      "retrieval": {
+        "top1_intent_hit_rate_pct": 0.0,
+        "average_cosine_similarity": 0.0
+      },
+      "reply_quality_judge": {
+        "mean_factual_grounding": 3.0,
+        "mean_tone_brand_voice": 4.0,
+        "mean_actionability": 4.0,
+        "mean_safety_policy": 5.0,
+        "mean_overall_score": 3.95
+      }
+    },
+    "simple_baseline": {
+      "system_name": "Simple Baseline",
+      "sample_size": 160,
+      "elapsed_time_seconds": 1.63,
+      "intent_classification": {
+        "accuracy": 0.5875,
+        "macro_precision": 0.7194,
+        "macro_recall": 0.5838,
+        "macro_f1": 0.599,
+        "per_class": {
+          "order_status_tracking": {
+            "precision": 0.4872,
+            "recall": 0.7037,
+            "f1": 0.5758
+          },
+          "shipping_delay_delivery_issue": {
+            "precision": 0.6667,
+            "recall": 0.4545,
+            "f1": 0.5405
+          },
+          "refund_and_cancellation": {
+            "precision": 0.7143,
+            "recall": 0.9091,
+            "f1": 0.8
+          },
+          "damaged_or_wrong_item": {
+            "precision": 1.0,
+            "recall": 0.3182,
+            "f1": 0.4828
+          },
+          "account_access_security": {
+            "precision": 1.0,
+            "recall": 0.45,
+            "f1": 0.6207
+          },
+          "billing_and_payment_dispute": {
+            "precision": 0.8462,
+            "recall": 0.6471,
+            "f1": 0.7333
+          },
+          "subscription_and_digital_services": {
+            "precision": 0.8462,
+            "recall": 0.6875,
+            "f1": 0.7586
+          },
+          "general_feedback_other": {
+            "precision": 0.1944,
+            "recall": 0.5,
+            "f1": 0.28
+          }
+        },
+        "confusion_matrix": [
+          [
+            19,
+            5,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            11,
+            10,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            20,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            5,
+            0,
+            0,
+            7,
+            0,
+            1,
+            0,
+            9
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            9,
+            0,
+            0,
+            10
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            11,
+            1,
+            4
+          ],
+          [
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            11,
+            2
+          ],
+          [
+            4,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0,
+            7
+          ]
+        ],
+        "taxonomy": [
+          "order_status_tracking",
+          "shipping_delay_delivery_issue",
+          "refund_and_cancellation",
+          "damaged_or_wrong_item",
+          "account_access_security",
+          "billing_and_payment_dispute",
+          "subscription_and_digital_services",
+          "general_feedback_other"
+        ]
+      },
+      "routing_policy": {
+        "accuracy": 0.6438,
+        "escalation_precision": 0.4815,
+        "escalation_recall": 0.4727,
+        "escalation_f1": 0.4771,
+        "false_escalations": 28,
+        "missed_escalations": 29,
+        "total_routing_cost": 173.0,
+        "cost_per_query": 1.0813
+      },
+      "retrieval": {
+        "top1_intent_hit_rate_pct": 30.63,
+        "average_cosine_similarity": 0.3259
+      },
+      "reply_quality_judge": {
+        "mean_factual_grounding": 4.98,
+        "mean_tone_brand_voice": 4.35,
+        "mean_actionability": 3.59,
+        "mean_safety_policy": 5.0,
+        "mean_overall_score": 4.51
+      }
+    },
+    "production_agent": {
+      "system_name": "Production Agent",
+      "sample_size": 160,
+      "elapsed_time_seconds": 0.73,
+      "intent_classification": {
+        "accuracy": 0.6813,
+        "macro_precision": 0.7637,
+        "macro_recall": 0.6748,
+        "macro_f1": 0.6814,
+        "per_class": {
+          "order_status_tracking": {
+            "precision": 0.55,
+            "recall": 0.8148,
+            "f1": 0.6567
+          },
+          "shipping_delay_delivery_issue": {
+            "precision": 0.8333,
+            "recall": 0.4545,
+            "f1": 0.5882
+          },
+          "refund_and_cancellation": {
+            "precision": 0.7241,
+            "recall": 0.9545,
+            "f1": 0.8235
+          },
+          "damaged_or_wrong_item": {
+            "precision": 1.0,
+            "recall": 0.3636,
+            "f1": 0.5333
+          },
+          "account_access_security": {
+            "precision": 0.9412,
+            "recall": 0.8,
+            "f1": 0.8649
+          },
+          "billing_and_payment_dispute": {
+            "precision": 0.875,
+            "recall": 0.8235,
+            "f1": 0.8485
+          },
+          "subscription_and_digital_services": {
+            "precision": 0.9167,
+            "recall": 0.6875,
+            "f1": 0.7857
+          },
+          "general_feedback_other": {
+            "precision": 0.2692,
+            "recall": 0.5,
+            "f1": 0.35
+          }
+        },
+        "confusion_matrix": [
+          [
+            22,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            10,
+            10,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            21,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            0,
+            8,
+            0,
+            1,
+            0,
+            9
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            16,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            14,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            11,
+            2
+          ],
+          [
+            4,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0,
+            7
+          ]
+        ],
+        "taxonomy": [
+          "order_status_tracking",
+          "shipping_delay_delivery_issue",
+          "refund_and_cancellation",
+          "damaged_or_wrong_item",
+          "account_access_security",
+          "billing_and_payment_dispute",
+          "subscription_and_digital_services",
+          "general_feedback_other"
+        ]
+      },
+      "routing_policy": {
+        "accuracy": 0.4188,
+        "escalation_precision": 0.3716,
+        "escalation_recall": 1.0,
+        "escalation_f1": 0.5419,
+        "false_escalations": 93,
+        "missed_escalations": 0,
+        "total_routing_cost": 93.0,
+        "cost_per_query": 0.5813
+      },
+      "retrieval": {
+        "top1_intent_hit_rate_pct": 68.12,
+        "average_cosine_similarity": 0.2759
+      },
+      "reply_quality_judge": {
+        "mean_factual_grounding": 4.21,
+        "mean_tone_brand_voice": 4.64,
+        "mean_actionability": 4.74,
+        "mean_safety_policy": 5.0,
+        "mean_overall_score": 4.62
+      }
+    }
+  },
+  "judge_human_agreement": {
+    "sample_size": 40,
+    "cohens_kappa_quadratic": 0.2121,
+    "percent_within_1_point": 100.0,
+    "exact_agreement_pct": 67.5,
+    "mean_absolute_error": 0.2162,
+    "pearson_correlation": 0.436
+  }
+}
